@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cmd
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alias.cs" />
     <Compile Include="Cd.cs" />
     <Compile Include="Comand.cs" />
     <Compile Include="Dir.cs" />

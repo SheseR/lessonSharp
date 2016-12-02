@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.RegularExpressions;
 
 namespace Cmd
 {
@@ -16,7 +10,6 @@ namespace Cmd
             : base(command)
         {
         }
-
         protected override string GetValueCommand()
         {
             string[] word = StrCommand.Split(' ');
@@ -26,7 +19,6 @@ namespace Cmd
 
             return word[1];
         }
-
         public override void Execute()
         {
             var strValue = GetValueCommand();
@@ -60,15 +52,12 @@ namespace Cmd
                 Console.WriteLine(ex);
                 Console.ResetColor();
             }
-
         }
-
         private static void GoToParentDirectory()
         {
             var currentDirectory = Directory.GetCurrentDirectory();
             Directory.SetCurrentDirectory(Directory.GetParent(currentDirectory).ToString());    
         }
-
         private static void GoToChildDirectory(string child)
         {         
             try
@@ -87,8 +76,7 @@ namespace Cmd
                 Console.WriteLine(ex);
                 Console.ResetColor();
             }
-        }
-       
+        }      
         private static void GoToRootDisk(string valueDirectory)
         {
             Directory.SetCurrentDirectory(valueDirectory + @"\");
