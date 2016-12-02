@@ -12,12 +12,8 @@ namespace Cmd
         }
         protected override string GetValueCommand()
         {
-            string[] word = StrCommand.Split(' ');
-
-            if(word.Length != 2)
-                return ErrorCommand;
-
-            return word[1];
+            var word = StrCommand.Split(' ');
+            return word.Length != 2 ? ErrorCommand : word[1];
         }
         public override void Execute()
         {

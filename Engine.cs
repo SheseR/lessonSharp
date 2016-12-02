@@ -3,16 +3,12 @@ using System.IO;
 
 namespace Cmd
 {
-
    internal class Engine
    {     
-       private string _currentDirectory = Directory.GetCurrentDirectory();
-        
+       private string _currentDirectory = Directory.GetCurrentDirectory();     
        public void MainLoop()
-       {
-          
+       {        
             var dones = true;
-
             while (dones)
             {
                 ShowCurrentDirectory();
@@ -34,17 +30,14 @@ namespace Cmd
                     default:
                         Console.WriteLine("Error");
                         break;
-
                 }
             }
        }
-
        private void ShowCurrentDirectory()
        {
             _currentDirectory = Directory.GetCurrentDirectory();
             Console.Write("\n" + _currentDirectory + ">");
        }
-
        private static string ParseComand(string command)
        {
            if(command.StartsWith("dir"))

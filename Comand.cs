@@ -24,7 +24,6 @@ namespace Cmd
         public const string StrExit = "exit";
         public const string StrAlias = "alias";
         public const string ErrorCommand = "error";
-
         #endregion
     }
 }

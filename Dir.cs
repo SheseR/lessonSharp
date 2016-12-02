@@ -9,7 +9,6 @@ namespace Cmd
             : base(command)
         {
         }
-
         private static void ShowConsistDirectory()
         {
             var currentDirectory = Directory.GetCurrentDirectory();
@@ -40,7 +39,6 @@ namespace Cmd
             var files = string.Join(Environment.NewLine, Directory.GetFiles(currentDirectory));
  */
         }
-
         protected override string GetValueCommand()
         {
             return StrDir == StrCommand ? String.Empty : ErrorCommand;
